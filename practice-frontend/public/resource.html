@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resource</title>
+  </head>
+  <body>
+    <h2>Access resource</h2>
+    <div id="response"></div>
+    <script>
+      // get string from api localhost:8080/api/test/user with include httponly cookie
+
+      fetch("http://localhost:8080/api/test/mod", {
+        method: "GET",
+        credentials: "include",
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("response").innerHTML = data;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    </script>
+  </body>
+</html>

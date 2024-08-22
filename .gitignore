@@ -6,6 +6,8 @@ target/
 .env
 Dockerfile
 .dockerignore
+practice-frontend/node_modules
+practice-frontend/.env
 
 ### STS ###
 .apt_generated
